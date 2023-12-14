@@ -11,7 +11,7 @@ public class ValidationPassword {
         if (password.length() >= LENGTH_LIMIT ){
             throw new WrongPasswordException("Incorrect password. Maximum password length exceeded.");
         }
-        if (CharNumber.CharNumberCheck(password)){
+        if (CharNumber.charNumberCheck(password)){
             throw new WrongPasswordException("Incorrect password. The password must contain at least one number.");
         }
         if (PasswordCharSpace.charSpaceCheck(password)){
