@@ -1,17 +1,17 @@
-package com.teachmeskills.homework_13.task_2.validation;
+package com.teachmeskills.homework_13.task_2.verification;
 
 import com.teachmeskills.homework_13.task_2.exception.WrongPasswordException;
 import com.teachmeskills.homework_13.task_2.charArray.CharNumber;
 import com.teachmeskills.homework_13.task_2.charArray.PasswordCharSpace;
 
-public class ValidationPassword {
+public class VerificationPassword {
 
     public static int LENGTH_LIMIT = 20;
-    public static void validationPassword(String password, String confirmPassword) throws WrongPasswordException {
+    public static void doVerificationPassword(String password, String confirmPassword) throws WrongPasswordException {
         if (password.length() >= LENGTH_LIMIT ){
             throw new WrongPasswordException("Incorrect password. Maximum password length exceeded.");
         }
-        if (CharNumber.CharNumberCheck(password)){
+        if (CharNumber.charNumberCheck(password)){
             throw new WrongPasswordException("Incorrect password. The password must contain at least one number.");
         }
         if (PasswordCharSpace.charSpaceCheck(password)){

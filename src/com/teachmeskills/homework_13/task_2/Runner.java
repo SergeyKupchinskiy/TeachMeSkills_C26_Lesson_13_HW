@@ -23,7 +23,7 @@ package com.teachmeskills.homework_13.task_2;
  * split the string into an array of chars (string toCharArray()) and traverse and check the array
  */
 
-import com.teachmeskills.homework_13.task_2.validation.ValidationAccount;
+import com.teachmeskills.homework_13.task_2.verification.VerificationAccount;
 
 import java.util.Scanner;
 
@@ -40,7 +40,7 @@ public class Runner {
         System.out.println("Please, confirm your password");
         String confirmPassword = scanner.nextLine();
 
-        if (ValidationAccount.validationAccount(login, password, confirmPassword)){
+        if (VerificationAccount.doVerificationAccount(login, password, confirmPassword)){
             System.out.println("Account details are entered correctly");
         } else {
             System.out.println("\nAccount details are entered incorrectly");
