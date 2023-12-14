@@ -1,7 +1,7 @@
 package com.teachmeskills.homework_13.task_2.charArray;
 
 public class CharNumber {
-    public static boolean CharNumberCheck(String password){
+    public static boolean charNumberCheck(String password){
 
         char[] chars = password.toCharArray();
 
